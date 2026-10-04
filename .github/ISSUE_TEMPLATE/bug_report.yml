@@ -1,0 +1,118 @@
+name: Bug report
+description: Something in Lateping is not working the way it should.
+title: "[Bug]: "
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If this is a setup question rather than a bug, email
+        [support@lateping.com](mailto:support@lateping.com) instead. It is faster.
+
+        Never paste a full ping URL, API key or webhook secret here: anyone who
+        sees a ping URL can ping your check.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      options:
+        - Pings (lateping.com/p/...)
+        - Late or missing alerts
+        - Alert delivery (email, Slack, Discord, webhook)
+        - Panel (app.lateping.com)
+        - Sign-in, passkeys or two-factor
+        - Run analytics or status badges
+        - API
+        - GitHub Action (lateping/ping)
+        - Guides
+        - Billing or subscriptions
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the behaviour you saw.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Number the steps so we can follow the exact path you took.
+      placeholder: |
+        1. Create a check with cron "17 2 * * *" in Australia/Melbourne, grace 10 minutes
+        2. Ping it at 02:20
+        3. A late alert arrives at 02:28 anyway
+    validations:
+      required: true
+
+  - type: input
+    id: check
+    attributes:
+      label: Check name, or the first 8 characters of its ID
+      description: Enough for us to find it in our logs. Not the full ping URL.
+    validations:
+      required: false
+
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen?
+      description: Approximate date and time, with your timezone or UTC offset.
+      placeholder: "2026-10-05 02:28 AEDT"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Plan
+      options:
+        - Free
+        - Pro
+        - Team
+        - Founding
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Where the job runs (crontab on Ubuntu, GitHub Actions, a Worker...), and for panel issues your browser and operating system.
+      placeholder: "crontab on Debian 13 / Safari 19 on macOS"
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots, logs, or anything else
+      description: The curl output or the job's log around the ping helps. Redact anything sensitive first.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I have searched the existing issues and this has not already been reported.
+          required: true
+        - label: This is not a security vulnerability. (Those go through [SECURITY.md](https://github.com/lateping/lateping/blob/main/SECURITY.md).)
+          required: true
+        - label: I have not included ping URLs, API keys, webhook secrets or other people's personal information.
+          required: true

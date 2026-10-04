@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup help and general questions
+    url: mailto:support@lateping.com
+    about: The fastest way to get help. We reply within 12 hours.
+  - name: Guides
+    url: https://lateping.com/guides
+    about: Setup for GitHub Actions, Cloudflare Workers, crontab, Vercel Cron, pg_cron, Kubernetes, systemd and more.
+  - name: Billing, account and privacy requests
+    url: mailto:support@lateping.com
+    about: Anything involving payments, your account or your data. Please email rather than opening a public issue.
+  - name: Report a security vulnerability
+    url: https://github.com/lateping/lateping/security/advisories/new
+    about: Report privately. Never disclose a vulnerability in a public issue.

@@ -1,0 +1,72 @@
+name: Feature request
+description: Suggest something Lateping should be able to do.
+title: "[Feature]: "
+labels: ["enhancement", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem behind the request as well as the feature itself.
+        Knowing what you are trying to achieve often opens up a better solution
+        than the one you started with.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Lateping?
+      options:
+        - Checks and schedules
+        - Alert channels (a new destination, or changes to one)
+        - Panel
+        - Run analytics or status badges
+        - API
+        - GitHub Action
+        - A guide for a platform we don't cover
+        - Teams and seats
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: What do you monitor today, and where does it fall down?
+      placeholder: >
+        Our on-call rota lives in PagerDuty, so an alert that only reaches Slack
+        at 3am goes unseen until morning.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like Lateping to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What have you tried instead?
+      description: Workarounds you are using now, or other approaches you considered.
+    validations:
+      required: false
+
+  - type: input
+    id: scale
+    attributes:
+      label: Roughly how many scheduled jobs do you run?
+      placeholder: "About 40 crons across 6 servers, plus 10 GitHub Actions schedules"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I have searched the existing issues and this has not already been requested.
+          required: true
+        - label: I have checked the [guides](https://lateping.com/guides) and this is not already possible.
+          required: true
