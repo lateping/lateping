@@ -7,7 +7,7 @@
   <br><br>
   <a href="https://app.lateping.com/signup"><img src="https://img.shields.io/badge/Start%20free-0d7a5f?logoColor=white" alt="Start free"></a>
   <a href="https://lateping.com/guides"><img src="https://img.shields.io/badge/Guides-lateping.com-0b0b0b" alt="Guides"></a>
-  <a href="https://github.com/lateping/ping"><img src="https://img.shields.io/badge/GitHub%20Action-lateping%2Fping-181717?logo=github&logoColor=white" alt="GitHub Action"></a>
+  <a href="https://github.com/marketplace/actions/lateping-ping"><img src="https://img.shields.io/badge/GitHub%20Action-lateping%2Fping-181717?logo=github&logoColor=white" alt="GitHub Action"></a>
   <br>
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/Cloudflare%20Workers-F38020?logo=cloudflareworkers&logoColor=white" alt="Cloudflare Workers">
