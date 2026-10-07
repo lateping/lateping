@@ -38,7 +38,7 @@ Free for 10 checks with email alerts. No card, no password.
 | Feature | What it does |
 | --- | --- |
 | Heartbeat checks | A period ("every hour") or a cron expression with a timezone, and a grace period. Preview the next runs before you save. |
-| Start, success and fail pings | `/start` times each run; `/fail` alerts at once instead of waiting for the deadline. |
+| Start, success and fail pings | `/start` times each run; `/fail` alerts at once instead of waiting for the deadline. Or send the exit code (`/p/<check-id>/$?`): 0 is a success, anything else alerts and shows the code. |
 | Alerts where you work | Email on every plan; Slack, Discord and signed webhooks on Pro. Turn any destination on or off per check, and make the account email a backup so nobody gets every alert twice. |
 | Our downtime is never your alert | If Lateping itself goes down, every deadline that fell inside the gap moves back by the gap. If a large share of checks go late at once, alerts are held, because a mass event is more likely our problem than yours. |
 | Run analytics | How long each run takes, how early or late pings arrive, charts and CSV export (Pro). |
